@@ -1,38 +1,99 @@
-# create-svelte
+# **sv-tw-scss**
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## **[`Sveltekit`](https://kit.svelte.dev/docs/introduction) 🔹 [`Tailwind`](https://tailwindcss.com/docs/installation) 🔹 [`Scss`](https://sass-lang.com/documentation/syntax) 🔹 [`TS`](https://www.typescriptlang.org/docs/) 🔹 [`Prettier`](https://prettier.io/docs/en/index.html) 🔹 [`ESLint`](https://eslint.org/docs/latest/)**
 
-## Creating a project
+<br />
 
-If you're seeing this, you've probably already done this step. Congrats!
+## **Setup**
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+****
 
-# create a new project in my-app
-npm create svelte@latest my-app
+`npm i`
+
+<br />
+
+## **Linting**
+
+****
+
+`npm run format-lint`
+
+<br />
+
+## **Aliases**
+
+****
+
+Directories in the lib folder:
+
+- **$utils**
+- **$guards**
+- **$stores**
+- **$assets**
+- **$models**
+- **$actions**
+- **$services**
+- **$components**
+
+<br />
+
+## **Global styles**
+
+****
+
+Global styles go in **src/styles/global.scss**.
+
+<br />
+
+## **Media query mixins**
+
+****
+
+- **before()**
+- **after()**
+- **is()**
+
+Can be used with:
+
+- **mobile**
+- **tablet**
+- **laptop**
+- **desktop**
+- **wide**
+- **ultrawide**
+- **superultrawide**
+
+
+```scss
+// @use not required
+
+@include before(tablet) {
+  .example {
+    color: blue;
+  }
+};
 ```
 
-## Developing
+|                        | mobile | tablet | laptop | desktop | wide | ultrawide | superultrawide |
+|------------------------|--------|--------|--------|---------|------|-----------|----------------|
+| **before**(tablet)         | 🔵      |        |        |         |      |           |                |
+| **before**(laptop)         | 🔵      | 🔵      |        |         |      |           |                |
+| **before**(desktop)        | 🔵      | 🔵      | 🔵      |         |      |           |                |
+| **before**(wide)           | 🔵      | 🔵      | 🔵      | 🔵       |      |           |                |
+| **before**(ultrawide)      | 🔵      | 🔵      | 🔵      | 🔵       | 🔵    |           |                |
+| **before**(superultrawide) | 🔵      | 🔵      | 🔵      | 🔵       | 🔵    | 🔵         |                |
+| **after**(mobile)          |        | 🔵      | 🔵      | 🔵       | 🔵    | 🔵         | 🔵              |
+| **after**(tablet)          |        |        | 🔵      | 🔵       | 🔵    | 🔵         | 🔵              |
+| **after**(laptop)          |        |        |        | 🔵       | 🔵    | 🔵         | 🔵              |
+| **after**(desktop)         |        |        |        |         | 🔵    | 🔵         | 🔵              |
+| **after**(wide)            |        |        |        |         |      | 🔵         | 🔵              |
+| **after**(ultrawide)       |        |        |        |         |      |           | 🔵              |
+| **is**(mobile)             | 🔵      |        |        |         |      |           |                |
+| **is**(tablet)             |        | 🔵      |        |         |      |           |                |
+| **is**(laptop)             |        |        | 🔵      |         |      |           |                |
+| **is**(desktop)            |        |        |        | 🔵       |      |           |                |
+| **is**(wide)               |        |        |        |         | 🔵    |           |                |
+| **is**(ultrawide)          |        |        |        |         |      | 🔵         |                |
+| **is**(superultrawide)     |        |        |        |         |      |           | 🔵              |
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+<br />
