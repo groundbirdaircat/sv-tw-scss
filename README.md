@@ -24,7 +24,7 @@
 
 ****
 
-Directories in the lib folder:
+For the lib folder:
 
 - **$utils**
 - **$guards**
@@ -53,7 +53,7 @@ Global styles go in **src/styles/global.scss**.
 - **after()**
 - **is()**
 
-Can be used with:
+Uses:
 
 - **mobile**
 - **tablet**
@@ -62,6 +62,12 @@ Can be used with:
 - **wide**
 - **ultrawide**
 - **superultrawide**
+
+`is()` also accepts:
+
+- **small**
+- **medium**
+- **large**
 
 
 ```scss
@@ -74,26 +80,30 @@ Can be used with:
 };
 ```
 
-|                        | mobile | tablet | laptop | desktop | wide | ultrawide | superultrawide |
+|                        | `mobile` | `tablet` | `laptop` | `desktop` | `wide` | `ultrawide` | `superultrawide` |
 |------------------------|--------|--------|--------|---------|------|-----------|----------------|
-| **before**(tablet)         | 🔵      |        |        |         |      |           |                |
-| **before**(laptop)         | 🔵      | 🔵      |        |         |      |           |                |
-| **before**(desktop)        | 🔵      | 🔵      | 🔵      |         |      |           |                |
-| **before**(wide)           | 🔵      | 🔵      | 🔵      | 🔵       |      |           |                |
-| **before**(ultrawide)      | 🔵      | 🔵      | 🔵      | 🔵       | 🔵    |           |                |
-| **before**(superultrawide) | 🔵      | 🔵      | 🔵      | 🔵       | 🔵    | 🔵         |                |
-| **after**(mobile)          |        | 🔵      | 🔵      | 🔵       | 🔵    | 🔵         | 🔵              |
-| **after**(tablet)          |        |        | 🔵      | 🔵       | 🔵    | 🔵         | 🔵              |
-| **after**(laptop)          |        |        |        | 🔵       | 🔵    | 🔵         | 🔵              |
-| **after**(desktop)         |        |        |        |         | 🔵    | 🔵         | 🔵              |
-| **after**(wide)            |        |        |        |         |      | 🔵         | 🔵              |
-| **after**(ultrawide)       |        |        |        |         |      |           | 🔵              |
-| **is**(mobile)             | 🔵      |        |        |         |      |           |                |
-| **is**(tablet)             |        | 🔵      |        |         |      |           |                |
-| **is**(laptop)             |        |        | 🔵      |         |      |           |                |
-| **is**(desktop)            |        |        |        | 🔵       |      |           |                |
-| **is**(wide)               |        |        |        |         | 🔵    |           |                |
-| **is**(ultrawide)          |        |        |        |         |      | 🔵         |                |
-| **is**(superultrawide)     |        |        |        |         |      |           | 🔵              |
+| `before(tablet)`         | 🔵      |        |        |         |      |           |                |
+| `before(laptop)`         | 🔵      | 🔵      |        |         |      |           |                |
+| `before(desktop)`        | 🔵      | 🔵      | 🔵      |         |      |           |                |
+| `before(wide)`           | 🔵      | 🔵      | 🔵      | 🔵       |      |           |                |
+| `before(ultrawide)`      | 🔵      | 🔵      | 🔵      | 🔵       | 🔵    |           |                |
+| `before(superultrawide)` | 🔵      | 🔵      | 🔵      | 🔵       | 🔵    | 🔵         |                |
+| `after(mobile)`          |        | 🔵      | 🔵      | 🔵       | 🔵    | 🔵         | 🔵              |
+| `after(tablet)`          |        |        | 🔵      | 🔵       | 🔵    | 🔵         | 🔵              |
+| `after(laptop)`          |        |        |        | 🔵       | 🔵    | 🔵         | 🔵              |
+| `after(desktop)`         |        |        |        |         | 🔵    | 🔵         | 🔵              |
+| `after(wide)`            |        |        |        |         |      | 🔵         | 🔵              |
+| `after(ultrawide)`       |        |        |        |         |      |           | 🔵              |
+| `is(mobile)`             | 🔵      |        |        |         |      |           |                |
+| `is(tablet)`             |        | 🔵      |        |         |      |           |                |
+| `is(laptop)`             |        |        | 🔵      |         |      |           |                |
+| `is(desktop)`            |        |        |        | 🔵       |      |           |                |
+| `is(wide)`               |        |        |        |         | 🔵    |           |                |
+| `is(ultrawide)`          |        |        |        |         |      | 🔵         |                |
+| `is(superultrawide)`     |        |        |        |         |      |           | 🔵              |
+| `is(small)`              | 🔵       | 🔵       |        |         |      |           |                |
+| `is(medium)`             |        |        | 🔵       | 🔵        |      |           |                |
+| `is(large)`              |        |        |        |         | 🔵     | 🔵          | 🔵               |
+|_____________________________|____________|____________|____________|____________|____________|____________|___________________|
 
 <br />
