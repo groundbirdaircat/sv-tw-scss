@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'mq-breakpoints' as *;
 
 // Before
 
@@ -11,12 +12,12 @@
 
 $before-breakpoints: (
 	mobile: ⛔ before(mobile) is invalid ⛔,
-	tablet: 600px,
-	laptop: 900px,
-	desktop: 1400px,
-	wide: 2200px,
-	ultrawide: 3300px,
-	superultrawide: 4400px
+	tablet: $bp-m,
+	laptop: $bp-t,
+	desktop: $bp-l,
+	wide: $bp-d,
+	ultrawide: $bp-w,
+	superultrawide: $bp-u
 );
 
 // After
@@ -29,12 +30,12 @@ $before-breakpoints: (
 }
 
 $after-breakpoints: (
-	mobile: 600px,
-	tablet: 900px,
-	laptop: 1400px,
-	desktop: 2200px,
-	wide: 3300px,
-	ultrawide: 4400px,
+	mobile: $bp-m,
+	tablet: $bp-t,
+	laptop: $bp-l,
+	desktop: $bp-d,
+	wide: $bp-w,
+	ultrawide: $bp-u,
 	superultrawide: ⛔ after(superultrawide) is invalid ⛔
 );
 
@@ -49,21 +50,27 @@ $after-breakpoints: (
 }
 
 $is-min-breakpoints: (
-	mobile: 0px,
-	tablet: 600px,
-	laptop: 900px,
-	desktop: 1400px,
-	wide: 2200px,
-	ultrawide: 3300px,
-	superultrawide: 4400px
+	mobile: $bp-z,
+	tablet: $bp-m,
+	laptop: $bp-t,
+	desktop: $bp-l,
+	wide: $bp-d,
+	ultrawide: $bp-w,
+	superultrawide: $bp-u,
+	small: $bp-z,
+	medium: $bp-t,
+	large: $bp-d
 );
 
 $is-max-breakpoints: (
-	mobile: 600px,
-	tablet: 900px,
-	laptop: 1400px,
-	desktop: 2200px,
-	wide: 3300px,
-	ultrawide: 4400px,
-	superultrawide: 99999px
+	mobile: $bp-m,
+	tablet: $bp-t,
+	laptop: $bp-l,
+	desktop: $bp-d,
+	wide: $bp-w,
+	ultrawide: $bp-u,
+	superultrawide: $bp-s,
+	small: $bp-t,
+	medium: $bp-d,
+	large: $bp-s
 );
