@@ -1,6 +1,6 @@
 # **sv-tw-scss**
 
-### **[`Sveltekit`](https://kit.svelte.dev/docs/introduction) 🔹 [`Tailwind`](https://tailwindcss.com/docs/installation) 🔹 [`Scss`](https://sass-lang.com/documentation/syntax) 🔹 [`TS`](https://www.typescriptlang.org/docs/) 🔹 [`Prettier`](https://prettier.io/docs/en/index.html) 🔹 [`ESLint`](https://eslint.org/docs/latest/)**
+### **[Sveltekit](https://kit.svelte.dev/docs/introduction) 🔹 [Tailwind](https://tailwindcss.com/docs/installation) 🔹 [Scss](https://sass-lang.com/documentation/syntax) 🔹 [TS](https://www.typescriptlang.org/docs/) 🔹 [Prettier](https://prettier.io/docs/en/index.html) 🔹 [ESLint](https://eslint.org/docs/latest/)**
 
 <br />
 
@@ -18,8 +18,6 @@
 
 ## **Aliases**
 
-For the lib folder:
-
 - **$utils**
 - **$guards**
 - **$stores**
@@ -33,7 +31,7 @@ For the lib folder:
 
 ## **Global styles**
 
-Global styles go in **src/styles/global.scss**.
+**src/styles/global.scss**
 
 <br />
 
@@ -59,6 +57,8 @@ Uses:
 - **medium**
 - **large**
 
+<br />
+
 
 ```scss
 // @use not required
@@ -70,30 +70,32 @@ Uses:
 };
 ```
 
-|                        | mobile | tablet | laptop | desktop | wide | ultrawide | superultrawide |
-|------------------------|--------|--------|--------|---------|------|-----------|----------------|
-| before(tablet)         | 🔵      |        |        |         |      |           |                |
-| before(laptop)         | 🔵      | 🔵      |        |         |      |           |                |
-| before(desktop)        | 🔵      | 🔵      | 🔵      |         |      |           |                |
-| before(wide)           | 🔵      | 🔵      | 🔵      | 🔵       |      |           |                |
-| before(ultrawide)      | 🔵      | 🔵      | 🔵      | 🔵       | 🔵    |           |                |
-| before(superultrawide) | 🔵      | 🔵      | 🔵      | 🔵       | 🔵    | 🔵         |                |
-| after(mobile)          |        | 🔵      | 🔵      | 🔵       | 🔵    | 🔵         | 🔵              |
-| after(tablet)          |        |        | 🔵      | 🔵       | 🔵    | 🔵         | 🔵              |
-| after(laptop)          |        |        |        | 🔵       | 🔵    | 🔵         | 🔵              |
-| after(desktop)         |        |        |        |         | 🔵    | 🔵         | 🔵              |
-| after(wide)            |        |        |        |         |      | 🔵         | 🔵              |
-| after(ultrawide)       |        |        |        |         |      |           | 🔵              |
-| is(mobile)             | 🔵      |        |        |         |      |           |                |
-| is(tablet)             |        | 🔵      |        |         |      |           |                |
-| is(laptop)             |        |        | 🔵      |         |      |           |                |
-| is(desktop)            |        |        |        | 🔵       |      |           |                |
-| is(wide)               |        |        |        |         | 🔵    |           |                |
-| is(ultrawide)          |        |        |        |         |      | 🔵         |                |
-| is(superultrawide)     |        |        |        |         |      |           | 🔵              |
-| is(small)              | 🔵       | 🔵       |        |         |      |           |                |
-| is(medium)             |        |        | 🔵       | 🔵        |      |           |                |
-| is(large)              |        |        |        |         | 🔵     | 🔵          | 🔵               |
-|________________________|__________|__________|__________|__________|__________|__________|_________________|
+<br />
+
+|                        | *mob* | *tab* | *lap* | *dsk* | *wde* | *uwd* | *suw* |
+|------------------------|-----|-----|-----|-----|-----|-----|-----|
+| before(tablet)         | 🔵   |     |     |     |     |     |     |
+| before(laptop)         | 🔵   | 🔵   |     |     |     |     |     |
+| before(desktop)        | 🔵   | 🔵   | 🔵   |     |     |     |     |
+| before(wide)           | 🔵   | 🔵   | 🔵   | 🔵   |     |     |     |
+| before(ultrawide)      | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |     |     |
+| before(superultrawide) | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |     |
+| after(mobile)          |     | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |
+| after(tablet)          |     |     | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |
+| after(laptop)          |     |     |     | 🔵   | 🔵   | 🔵   | 🔵   |
+| after(desktop)         |     |     |     |     | 🔵   | 🔵   | 🔵   |
+| after(wide)            |     |     |     |     |     | 🔵   | 🔵   |
+| after(ultrawide)       |     |     |     |     |     |     | 🔵   |
+| is(mobile)             | 🔵   |     |     |     |     |     |     |
+| is(tablet)             |     | 🔵   |     |     |     |     |     |
+| is(laptop)             |     |     | 🔵   |     |     |     |     |
+| is(desktop)            |     |     |     | 🔵   |     |     |     |
+| is(wide)               |     |     |     |     | 🔵   |     |     |
+| is(ultrawide)          |     |     |     |     |     | 🔵   |     |
+| is(superultrawide)     |     |     |     |     |     |     | 🔵   |
+| is(small)              | 🔵   | 🔵   |     |     |     |     |     |
+| is(medium)             |     |     | 🔵   | 🔵   |     |     |     |
+| is(large)              |     |     |     |     | 🔵   | 🔵   | 🔵   |
+|________________________|_____|_____|_____|_____|_____|_____|_____|
 
 <br />
