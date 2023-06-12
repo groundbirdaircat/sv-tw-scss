@@ -1,0 +1,69 @@
+@use 'sass:map';
+
+// Before
+
+@mixin before($key) {
+	$size: map-get($before-breakpoints, $key);
+	@media (max-width: $size) {
+		@content;
+	}
+}
+
+$before-breakpoints: (
+	mobile: ⛔ before(mobile) is invalid ⛔,
+	tablet: 600px,
+	laptop: 900px,
+	desktop: 1400px,
+	wide: 2200px,
+	ultrawide: 3300px,
+	superultrawide: 4400px
+);
+
+// After
+
+@mixin after($key) {
+	$size: map-get($after-breakpoints, $key);
+	@media (min-width: $size) {
+		@content;
+	}
+}
+
+$after-breakpoints: (
+	mobile: 600px,
+	tablet: 900px,
+	laptop: 1400px,
+	desktop: 2200px,
+	wide: 3300px,
+	ultrawide: 4400px,
+	superultrawide: ⛔ after(superultrawide) is invalid ⛔
+);
+
+// Is
+
+@mixin is($key) {
+	$min-size: map-get($is-min-breakpoints, $key);
+	$max-size: map-get($is-max-breakpoints, $key);
+	@media (max-width: $max-size) and (min-width: $min-size) {
+		@content;
+	}
+}
+
+$is-min-breakpoints: (
+	mobile: 0px,
+	tablet: 600px,
+	laptop: 900px,
+	desktop: 1400px,
+	wide: 2200px,
+	ultrawide: 3300px,
+	superultrawide: 4400px
+);
+
+$is-max-breakpoints: (
+	mobile: 600px,
+	tablet: 900px,
+	laptop: 1400px,
+	desktop: 2200px,
+	wide: 3300px,
+	ultrawide: 4400px,
+	superultrawide: 99999px
+);
