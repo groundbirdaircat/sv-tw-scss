@@ -15,7 +15,14 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			// $components: './src/lib/components'
+			$utils: './src/lib/utils',
+			$guards: './src/lib/guards',
+			$stores: './src/lib/stores',
+			$assets: './src/lib/assets',
+			$models: './src/lib/models',
+			$actions: './src/lib/actions',
+			$services: './src/lib/services',
+			$components: './src/lib/components'
 		}
 	},
 	vitePlugin: {
