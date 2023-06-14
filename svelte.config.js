@@ -2,6 +2,11 @@ import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
+const ignore = [].includes.bind([
+	'css-unused-selector',
+	'vite-plugin-svelte-css-no-scopable-elements'
+]);
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [
@@ -30,7 +35,8 @@ const config = {
 			toggleKeyCombo: 'control-alt-i',
 			showToggleButton: 'never'
 		}
-	}
+	},
+	onwarn: (w, h) => (ignore(w.code) ? (_) => _ : h)(w)
 };
 
 export default config;
