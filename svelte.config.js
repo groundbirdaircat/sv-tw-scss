@@ -1,4 +1,3 @@
-import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
@@ -9,23 +8,18 @@ const ignore = [].includes.bind([
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	preprocess: [
-		vitePreprocess(),
-		preprocess({
-			scss: {
-				prependData: '@use "src/styles" as *;'
-			}
-		})
-	],
+	preprocess: [vitePreprocess()],
 	kit: {
 		adapter: adapter(),
 		alias: {
+			$dev: './src/lib/dev',
 			$utils: './src/lib/utils',
-			$guards: './src/lib/guards',
-			$stores: './src/lib/stores',
 			$assets: './src/lib/assets',
+			$guards: './src/lib/guards',
 			$models: './src/lib/models',
+			$stores: './src/lib/stores',
 			$actions: './src/lib/actions',
+			$classes: './src/lib/classes',
 			$services: './src/lib/services',
 			$components: './src/lib/components'
 		}
@@ -36,7 +30,7 @@ const config = {
 			showToggleButton: 'never'
 		}
 	},
-	onwarn: (w, h) => (ignore(w.code) ? (_) => _ : h)(w)
+	onwarn: (w, h) => (ignore(w.code) ? _ => _ : h)(w)
 };
 
 export default config;
