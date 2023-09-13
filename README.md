@@ -10,20 +10,35 @@
 
 <br />
 
+## **Dev Server**
+
+`npm run dev`
+
+For the **--host** flag:
+
+`npm run dev-h`
+
+<br />
+
 ## **Linting**
 
-`npm run format-lint`
+Format and lint consecutively:
+
+`npm run flint`
+
 
 <br />
 
 ## **Aliases**
 
+- **$dev**
 - **$utils**
-- **$guards**
-- **$stores**
 - **$assets**
+- **$guards**
 - **$models**
+- **$stores**
 - **$actions**
+- **$classes**
 - **$services**
 - **$components**
 
@@ -96,6 +111,6 @@ Uses:
 | is(small)              | 🔵   | 🔵   |     |     |     |     |     |
 | is(medium)             |     |     | 🔵   | 🔵   |     |     |     |
 | is(large)              |     |     |     |     | 🔵   | 🔵   | 🔵   |
-|________________________|_____|_____|_____|_____|_____|_____|_____|
+___
 
 <br />
