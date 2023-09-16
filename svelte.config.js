@@ -21,6 +21,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$dev: './src/lib/dev',
+			$mock: './src/lib/mock',
 			$utils: './src/lib/utils',
 			$assets: './src/lib/assets',
 			$guards: './src/lib/guards',

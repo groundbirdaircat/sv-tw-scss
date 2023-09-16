@@ -1,6 +1,14 @@
 # **sv-tw-scss**
 
+#### **Library Docs:**
+
 ### **[Sveltekit](https://kit.svelte.dev/docs/introduction) 🔹 [Tailwind](https://tailwindcss.com/docs/installation) 🔹 [Scss](https://sass-lang.com/documentation/syntax) 🔹 [TS](https://www.typescriptlang.org/docs/) 🔹 [Prettier](https://prettier.io/docs/en/index.html) 🔹 [ESLint](https://eslint.org/docs/latest/)**
+
+#### **VSCode Extensions:**
+
+- [**Tailwind CSS IntelliSense**](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [**Svelte Intellisense**](https://marketplace.visualstudio.com/items?itemName=ardenivanov.svelte-intellisense)
+- [**Svelte for VS Code**](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
 
 <br />
 
@@ -32,6 +40,7 @@ Format and lint consecutively:
 ## **Aliases**
 
 - **$dev**
+- **$mock**
 - **$utils**
 - **$assets**
 - **$guards**
