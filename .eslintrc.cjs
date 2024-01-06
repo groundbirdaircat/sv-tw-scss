@@ -27,12 +27,10 @@ module.exports = {
 			}
 		}
 	],
-	rules: {
-		'@typescript-eslint/no-non-null-assertion': ['off'],
-		'svelte/valid-compile': ['error', { ignoreWarnings: true }],
-		'@typescript-eslint/no-unused-vars': [
-			'warn',
-			{ varsIgnorePattern: '^_+$', argsIgnorePattern: '^_+$' }
-		]
-	}
+  rules: {
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { varsIgnorePattern: '^_+$', argsIgnorePattern: '^_+$' }
+    ]
+  }
 };

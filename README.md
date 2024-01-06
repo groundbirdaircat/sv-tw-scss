@@ -2,7 +2,13 @@
 
 #### **Library Docs:**
 
-### **[Sveltekit](https://kit.svelte.dev/docs/introduction) 🔹 [Tailwind](https://tailwindcss.com/docs/installation) 🔹 [Scss](https://sass-lang.com/documentation/syntax) 🔹 [TS](https://www.typescriptlang.org/docs/) 🔹 [Prettier](https://prettier.io/docs/en/index.html) 🔹 [ESLint](https://eslint.org/docs/latest/)**
+- **[Svelte](https://svelte.dev/docs/introduction)**
+- **[Sveltekit](https://kit.svelte.dev/docs/introduction)**
+- **[Tailwind](https://tailwindcss.com/docs/installation)**
+- **[Scss](https://sass-lang.com/documentation/syntax)**
+- **[TypeScript](https://www.typescriptlang.org/docs/)**
+- **[Prettier](https://prettier.io/docs/en/index.html)**
+- **[ESLint](https://eslint.org/docs/latest/)**
 
 #### **VSCode Extensions:**
 
@@ -16,15 +22,7 @@
 
 `npm i`
 
-<br />
-
-## **Dev Server**
-
 `npm run dev`
-
-For the **--host** flag:
-
-`npm run dev-h`
 
 <br />
 
@@ -33,23 +31,6 @@ For the **--host** flag:
 Format and lint consecutively:
 
 `npm run flint`
-
-
-<br />
-
-## **Aliases**
-
-- **$dev**
-- **$mock**
-- **$utils**
-- **$assets**
-- **$guards**
-- **$models**
-- **$stores**
-- **$actions**
-- **$classes**
-- **$services**
-- **$components**
 
 <br />
 

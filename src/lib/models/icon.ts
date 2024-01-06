@@ -1,3 +1,3 @@
-import type { Icon } from '$assets/icon';
+import type { Icon } from '$assets';
 
 export type Icons = keyof typeof Icon;
