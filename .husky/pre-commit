@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+cyan=$(tput setaf 6)
+resetText=$(tput sgr0)
+
+echo $cyan"    Checking files..."$resetText; echo; echo
+npx lint-staged -q 
