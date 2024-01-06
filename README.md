@@ -1,6 +1,6 @@
 # **sv-tw-scss**
 
-#### **Library Docs:**
+#### **Library Docs**
 
 - **[Svelte](https://svelte.dev/docs/introduction)**
 - **[Sveltekit](https://kit.svelte.dev/docs/introduction)**
@@ -10,11 +10,12 @@
 - **[Prettier](https://prettier.io/docs/en/index.html)**
 - **[ESLint](https://eslint.org/docs/latest/)**
 
-#### **VSCode Extensions:**
+#### **VSCode Extensions**
 
-- [**Tailwind CSS IntelliSense**](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 - [**Svelte Intellisense**](https://marketplace.visualstudio.com/items?itemName=ardenivanov.svelte-intellisense)
 - [**Svelte for VS Code**](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+- [**Tailwind CSS IntelliSense**](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [**Prettier - Code formatter**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 <br />
 
@@ -28,7 +29,7 @@
 
 ## **Linting**
 
-Format and lint consecutively:
+Format and lint consecutively
 
 `npm run flint`
 
@@ -36,48 +37,38 @@ Format and lint consecutively:
 
 ## **Global styles**
 
-**src/styles/global.scss**
+*src/styles/global.scss*
 
 <br />
 
-## **Media query mixins**
+## **Media queries**
 
-- **before()**
-- **after()**
-- **is()**
+### **Svelte Store**
 
-Uses:
+The readable store `ize` can be accessed with `$ize` in Svelte components  
+Outside of Svelte components, use the `getSize()` function  
+It can be compared against the `Size` enum
 
-- **mobile**
-- **tablet**
-- **laptop**
-- **desktop**
-- **wide**
-- **ultrawide**
-- **superultrawide**
+#### Enum properties  
+##### MOBILE • TABLET • LAPTOP • DESKTOP • WIDE • ULTRAWIDE • SUPERULTRAWIDE
 
-`is()` also accepts:
+```ts
+// Svelte components
+if ($ize === Size.SUPERULTRAWIDE) {
+  // do something big
+}
 
-- **small**
-- **medium**
-- **large**
-
-<br />
-
-
-```scss
-// @use not required
-
-@include before(tablet) {
-  .example {
-    color: blue;
-  }
-};
+// Typescript files
+if (getSize() <= Size.TABLET) {
+  // do something small
+}
 ```
 
-<br />
+### **Tailwind Screens** ***&*** **Scss Mixins**
 
-|                        | *mob* | *tab* | *lap* | *dsk* | *wde* | *uwd* | *suw* |
+Tailwind and Scss are configured to use the following values
+
+|*values*                  | *mob* | *tab* | *lap* | *dsk* | *wde* | *uwd* | *suw* |
 |------------------------|-----|-----|-----|-----|-----|-----|-----|
 | before(tablet)         | 🔵   |     |     |     |     |     |     |
 | before(laptop)         | 🔵   | 🔵   |     |     |     |     |     |
@@ -91,6 +82,9 @@ Uses:
 | after(desktop)         |     |     |     |     | 🔵   | 🔵   | 🔵   |
 | after(wide)            |     |     |     |     |     | 🔵   | 🔵   |
 | after(ultrawide)       |     |     |     |     |     |     | 🔵   |
+| is(small)              | 🔵   | 🔵   |     |     |     |     |     |
+| is(medium)             |     |     | 🔵   | 🔵   |     |     |     |
+| is(large)              |     |     |     |     | 🔵   | 🔵   | 🔵   |
 | is(mobile)             | 🔵   |     |     |     |     |     |     |
 | is(tablet)             |     | 🔵   |     |     |     |     |     |
 | is(laptop)             |     |     | 🔵   |     |     |     |     |
@@ -98,9 +92,31 @@ Uses:
 | is(wide)               |     |     |     |     | 🔵   |     |     |
 | is(ultrawide)          |     |     |     |     |     | 🔵   |     |
 | is(superultrawide)     |     |     |     |     |     |     | 🔵   |
-| is(small)              | 🔵   | 🔵   |     |     |     |     |     |
-| is(medium)             |     |     | 🔵   | 🔵   |     |     |     |
-| is(large)              |     |     |     |     | 🔵   | 🔵   | 🔵   |
 ___
 
 <br />
+
+### **Tailwind**
+```html
+<div class="bg-blue-500 after(tablet):bg-green-500">
+  default: blue
+  larger than tablet: green
+</div>
+  ```
+
+### 
+
+  ### **Scss**
+
+```scss
+@include before(laptop) {
+  div {
+    color: red;
+  }
+};
+```
+
+#### **Breakpoint configs**  
+##### *tailwind.config.js*  
+##### *src/lib/utils/media-query.ts*  
+##### *src/styles/mixins/_mq-breakpoints.scss*  
