@@ -4,73 +4,73 @@
 // Before
 
 @mixin before($key) {
-	$size: map-get($before-breakpoints, $key);
-	@media (max-width: $size) {
-		@content;
-	}
+  $size: map-get($before-breakpoints, $key);
+  @media (max-width: $size) {
+    @content;
+  }
 }
 
 $before-breakpoints: (
-	mobile: ⛔ before(mobile) is invalid ⛔,
-	tablet: $bp-m,
-	laptop: $bp-t,
-	desktop: $bp-l,
-	wide: $bp-d,
-	ultrawide: $bp-w,
-	superultrawide: $bp-u
+  mobile: ⛔ before(mobile) is invalid ⛔,
+  tablet: $bp-m,
+  laptop: $bp-t,
+  desktop: $bp-l,
+  wide: $bp-d,
+  ultrawide: $bp-w,
+  superultrawide: $bp-u
 );
 
 // After
 
 @mixin after($key) {
-	$size: map-get($after-breakpoints, $key);
-	@media (min-width: $size) {
-		@content;
-	}
+  $size: map-get($after-breakpoints, $key);
+  @media (min-width: $size) {
+    @content;
+  }
 }
 
 $after-breakpoints: (
-	mobile: $bp-m,
-	tablet: $bp-t,
-	laptop: $bp-l,
-	desktop: $bp-d,
-	wide: $bp-w,
-	ultrawide: $bp-u,
-	superultrawide: ⛔ after(superultrawide) is invalid ⛔
+  mobile: $bp-m,
+  tablet: $bp-t,
+  laptop: $bp-l,
+  desktop: $bp-d,
+  wide: $bp-w,
+  ultrawide: $bp-u,
+  superultrawide: ⛔ after(superultrawide) is invalid ⛔
 );
 
 // Is
 
 @mixin is($key) {
-	$min-size: map-get($is-min-breakpoints, $key);
-	$max-size: map-get($is-max-breakpoints, $key);
-	@media (max-width: $max-size) and (min-width: $min-size) {
-		@content;
-	}
+  $min-size: map-get($is-min-breakpoints, $key);
+  $max-size: map-get($is-max-breakpoints, $key);
+  @media (max-width: $max-size) and (min-width: $min-size) {
+    @content;
+  }
 }
 
 $is-min-breakpoints: (
-	mobile: $bp-z,
-	tablet: $bp-m,
-	laptop: $bp-t,
-	desktop: $bp-l,
-	wide: $bp-d,
-	ultrawide: $bp-w,
-	superultrawide: $bp-u,
-	small: $bp-z,
-	medium: $bp-t,
-	large: $bp-d
+  mobile: $bp-z,
+  tablet: $bp-m,
+  laptop: $bp-t,
+  desktop: $bp-l,
+  wide: $bp-d,
+  ultrawide: $bp-w,
+  superultrawide: $bp-u,
+  small: $bp-z,
+  medium: $bp-t,
+  large: $bp-d
 );
 
 $is-max-breakpoints: (
-	mobile: $bp-m,
-	tablet: $bp-t,
-	laptop: $bp-l,
-	desktop: $bp-d,
-	wide: $bp-w,
-	ultrawide: $bp-u,
-	superultrawide: $bp-s,
-	small: $bp-t,
-	medium: $bp-d,
-	large: $bp-s
+  mobile: $bp-m,
+  tablet: $bp-t,
+  laptop: $bp-l,
+  desktop: $bp-d,
+  wide: $bp-w,
+  ultrawide: $bp-u,
+  superultrawide: $bp-s,
+  small: $bp-t,
+  medium: $bp-d,
+  large: $bp-s
 );

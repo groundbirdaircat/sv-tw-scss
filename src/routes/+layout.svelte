@@ -1,10 +1,9 @@
 <script lang="ts">
-	import '../styles/global.scss';
-	import '../styles/tailwind.scss';
+  import '../styles/global.scss';
+  import '../styles/tailwind.scss';
 </script>
 
 <slot />
 
 <style lang="scss">
-
 </style>

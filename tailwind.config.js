@@ -1,13 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{html,js,svelte,ts,css,scss}'],
-	theme: {
-		extend: {}
-	},
-	plugins: [
-		/** @type {import('tailwindcss/types/config').PluginCreator} */
-		({ addUtilities }) => {
-			addUtilities({
+  content: ['./src/**/*.{html,js,svelte,ts,css,scss}'],
+  theme: {
+    extend: {}
+  },
+  plugins: [
+    /** @type {import('tailwindcss/types/config').PluginCreator} */
+    ({ addUtilities }) => {
+      addUtilities({
         '.flex-center': {
           display: 'flex',
           'justify-content': 'center',
@@ -69,7 +69,7 @@ export default {
           width: '100%',
           height: '100%'
         }
-			});
-		}
-	]
+      });
+    }
+  ]
 };
