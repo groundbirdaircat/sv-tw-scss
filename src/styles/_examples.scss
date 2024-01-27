@@ -1,0 +1,8 @@
+// mixin file imports with @use so no multiple forward error
+$var4mixin: 900px;
+
+// convert hex to rgba
+$hex2rgba: rgba(#f26897, 0.2);
+
+// mix 25% red, 75% blue
+$mixedColor: mix(red, blue, 25%);

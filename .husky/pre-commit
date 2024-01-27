@@ -1,0 +1,5 @@
+cyan=$(tput setaf 6)
+resetText=$(tput sgr0)
+
+echo $cyan"    Checking files..."$resetText; echo; echo
+npx lint-staged -q 
