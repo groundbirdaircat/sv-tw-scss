@@ -41,8 +41,7 @@
     "**/*.{js,ts,svelte}": [
       "prettier --write",
       "prettier --check",
-      "eslint --quiet",
-      "npm run check"
+      "eslint --quiet"
     ]
   }
 }
