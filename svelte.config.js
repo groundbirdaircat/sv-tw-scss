@@ -39,6 +39,7 @@ const config = {
       showToggleButton: 'never'
     }
   },
+  // @ts-expect-error ___
   onwarn: (w, h) => (ignore(w.code) ? _ => _ : h)(w)
 };
 
