@@ -1,16 +1,2 @@
-cyan=$(tput setaf 6)
-resetText=$(tput sgr0)
-
-echo $cyan"    Checking files..."$resetText; echo; echo
-npx lint-staged -q
-
-exit_code=0
-(npm run check > pre-commit-svelte-check 2>&1) || exit_code=$?
-svelte_check_line_count=$(wc -l < pre-commit-svelte-check)
-svelte_check_success_line_count=11
-if [ "$svelte_check_line_count" -gt "$svelte_check_success_line_count" ]; then
-  cat pre-commit-svelte-check | head -n -3 | tail -n +9 && cat pre-commit-svelte-check | tail -n 2; echo; echo
-fi
-rm pre-commit-svelte-check
-
-exit $exit_code
+npm run lint-staged
+npm run check
