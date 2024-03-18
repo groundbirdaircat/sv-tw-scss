@@ -9,6 +9,9 @@ const ignore = [].includes.bind([
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+  compilerOptions: {
+    runes: true
+  },
   preprocess: [
     vitePreprocess(),
     preprocess({

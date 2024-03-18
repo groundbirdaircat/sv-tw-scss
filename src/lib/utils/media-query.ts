@@ -1,6 +1,6 @@
 import { get, readable, type Readable } from 'svelte/store';
-import { type Dict } from '$models';
 import { browser } from '$app/environment';
+import type { Dict } from '$models/general';
 
 export const prefersReducedMotion = readable(false, set => {
   const query = '(prefers-reduced-motion: no-preference)';
