@@ -8,9 +8,9 @@ declare global {
     // interface Platform {}
   }
 
-  declare namespace svelteHTML {
+  namespace svelteHTML {
     interface HTMLAttributes<T> {
-      'on:click-outside'?: CompositionEventHandler<T>;
+      onClickOutside?: CompositionEventHandler<T>;
     }
   }
 }
