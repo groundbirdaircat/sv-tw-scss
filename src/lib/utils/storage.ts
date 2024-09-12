@@ -2,7 +2,7 @@
 import { browser } from '$app/environment';
 
 export function lsGet(key: string, fallback: any = '') {
-  if (!browser) return;
+  if (!browser) return fallback;
   return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
 }
 
@@ -12,7 +12,7 @@ export function lsSet(key: string, value: any = null) {
 }
 
 export function ssGet(key: string, fallback: any = '') {
-  if (!browser) return;
+  if (!browser) return fallback;
   return JSON.parse(sessionStorage.getItem(key) || JSON.stringify(fallback));
 }
 

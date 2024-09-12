@@ -1,7 +1,8 @@
 <script lang="ts">
   import type { SlotContent } from '$models/general';
-  import '../styles/global.scss';
+  import DevMenu from '$dev/DevMenu.svelte';
   import '../styles/tailwind.scss';
+  import '../styles/global.scss';
 
   let {
     children
@@ -10,4 +11,10 @@
   } = $props();
 </script>
 
-{@render children()}
+<div class="relative wh-full overflow-clip">
+  <div class="wh-full overflow-auto">
+    {@render children()}
+  </div>
+
+  <DevMenu />
+</div>

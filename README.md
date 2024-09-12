@@ -106,5 +106,5 @@ if (Size.isSuperultrawide) {
 
 #### **Breakpoint configs**  
 ##### *tailwind.config.js*  
-##### *src/lib/utils/media-query.ts*  
+##### *src/lib/state/media-query.svelte.ts*  
 ##### *src/styles/mixins/_mq-breakpoints.scss*  
