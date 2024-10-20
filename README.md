@@ -21,6 +21,12 @@
 
 ## **Setup**
 
+### .env file
+
+```bash
+PUBLIC_ENVIRONMENT=dev
+```
+
 `npm i`
 
 `npm run dev`
@@ -92,9 +98,6 @@ if (Size.isSuperultrawide) {
   ...
 </div>
   ```
-
-  ### **Scss**
-  ### **Scss**
 
 ### **Scss**
 
