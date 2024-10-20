@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // mixin file imports with @use so no multiple forward error
 $var4mixin: 900px;
 
@@ -5,4 +7,4 @@ $var4mixin: 900px;
 $hex2rgba: rgba(#f26897, 0.2);
 
 // mix 25% red, 75% blue
-$mixedColor: mix(red, blue, 25%);
+$mixedColor: color.mix(red, blue, 25%);

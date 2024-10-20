@@ -15,8 +15,8 @@ export function trimSpace(value = ''): string {
   return value.trim().replaceAll(/[ \t]{2,}/g, ' ');
 }
 
-export function addSpaceIfValue(pos: 'before' | 'after', value: string): string {
-  return value ? (pos == 'before' ? ' ' + value : value + ' ') : '';
+export function space(value: string): string {
+  return value ? ' ' + value : '';
 }
 
 export function downloadFile(url: string, fileName: string): void {

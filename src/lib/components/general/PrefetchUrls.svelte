@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let prefetchUrls: string[];
+  let { prefetchUrls }: { prefetchUrls: string[] } = $props();
 </script>
 
 <div class="hidden">

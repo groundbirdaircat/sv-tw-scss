@@ -1,5 +1,3 @@
-// See https://kit.svelte.dev/docs/types#app
-// for information about these interfaces
 declare global {
   namespace App {
     // interface Error {}
@@ -8,9 +6,10 @@ declare global {
     // interface Platform {}
   }
 
-  declare namespace svelteHTML {
+  namespace svelteHTML {
     interface HTMLAttributes<T> {
-      'on:click-outside'?: CompositionEventHandler<T>;
+      onClickOutside?: CompositionEventHandler<T>;
+      onPressKeyCode?: CompositionEventHandler<T>;
     }
   }
 }

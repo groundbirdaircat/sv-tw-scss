@@ -9,6 +9,9 @@ const ignore = [].includes.bind([
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+  compilerOptions: {
+    runes: true
+  },
   preprocess: [
     vitePreprocess(),
     preprocess({
@@ -39,6 +42,7 @@ const config = {
       showToggleButton: 'never'
     }
   },
+  // @ts-expect-error ___
   onwarn: (w, h) => (ignore(w.code) ? _ => _ : h)(w)
 };
 

@@ -1,9 +1,20 @@
 <script lang="ts">
-  import '../styles/global.scss';
+  import type { SlotContent } from '$models/general';
+  import DevMenu from '$dev/DevMenu.svelte';
   import '../styles/tailwind.scss';
+  import '../styles/global.scss';
+
+  let {
+    children
+  }: {
+    children: SlotContent;
+  } = $props();
 </script>
 
-<slot />
+<div class="relative wh-full overflow-clip">
+  <div class="wh-full overflow-auto">
+    {@render children()}
+  </div>
 
-<style lang="scss">
-</style>
+  <DevMenu />
+</div>
