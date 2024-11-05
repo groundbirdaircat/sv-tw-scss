@@ -9,7 +9,7 @@ enum Breakpoint {
   desktop = 2200,
   wide = 3300,
   ultrawide = 4400,
-  superultrawide = 99990
+  superultrawide = 99999
 }
 
 let _value = $state() as number;
