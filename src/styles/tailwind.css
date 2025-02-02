@@ -1,0 +1,122 @@
+@import 'tailwindcss';
+
+@layer base {
+  html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+@theme {
+  --breakpoint*: inherit;
+}
+
+@custom-variant beforeTablet (@media (width <= 600px));
+@custom-variant beforeLaptop (@media (width <= 900px));
+@custom-variant beforeDesktop (@media (width <= 1400px));
+@custom-variant beforeWide (@media (width <= 2200px));
+@custom-variant beforeUltrawide (@media (width <= 3300px));
+@custom-variant beforeSuperultrawide (@media (width <= 4400px));
+
+@custom-variant afterMobile (@media (width > 600px));
+@custom-variant afterTablet (@media (width > 900px));
+@custom-variant afterLaptop (@media (width > 1400px));
+@custom-variant afterDesktop (@media (width > 2200px));
+@custom-variant afterWide (@media (width > 3300px));
+@custom-variant afterUltrawide (@media (width > 4400px));
+
+@custom-variant isSmall (@media (width <= 900px));
+@custom-variant isMedium (@media (width > 900px) and (width <= 2200px));
+@custom-variant isLarge (@media (width > 2200px));
+
+@custom-variant isMobile (@media (width <= 600px));
+@custom-variant isTablet (@media (width > 600px) and (width <= 900px));
+@custom-variant isLaptop (@media (width > 900px) and (width <= 1400px));
+@custom-variant isDesktop (@media (width > 1400px) and (width <= 2200px));
+@custom-variant isWide (@media (width > 2200px) and (width <= 3300px));
+@custom-variant isUltrawide (@media (width > 3300px) and (width <= 4400px));
+@custom-variant isSuperultrawide (@media (width > 4400px));
+
+@utility flex-center { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+@utility flex-align { 
+  display: flex; 
+  align-items: center; 
+}
+
+@utility flex-justify { 
+  display: flex; 
+  justify-content: center; 
+}
+
+@utility flex-col { 
+  display: flex; 
+  flex-direction: column; 
+}
+
+@utility flex-center-col { 
+  flex-direction: column; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+@utility flex-align-col { 
+  flex-direction: column; 
+  display: flex; 
+  align-items: center; 
+}
+
+@utility flex-justify-col { 
+  flex-direction: column; 
+  display: flex; 
+  justify-content: center; 
+}
+
+@utility text-2xs { 
+  font-size: .6rem; 
+  line-height: .8rem; 
+}
+
+@utility text-balance { 
+  text-wrap: balance; 
+}
+
+@utility backdrop-blur-2xs { 
+  backdrop-filter: blur(1px); 
+}
+
+@utility backdrop-blur-xs { 
+  backdrop-filter: blur(2px); 
+}
+
+@utility wh-full { 
+  width: 100%; 
+  height: 100%; 
+}
+
+@utility no-select {
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@utility bdr {
+  border: 1px red solid;
+}
+
+@utility bdb {
+  border: 1px blue solid;
+}
+
+@utility bdg {
+  border: 1px lime solid;
+}

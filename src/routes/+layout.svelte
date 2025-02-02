@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { SlotContent } from '$models/general';
   import DevMenu from '$dev/DevMenu.svelte';
-  import '../styles/tailwind.scss';
+  import '../styles/tailwind.css';
   import '../styles/global.scss';
 
   let {

@@ -1,6 +1,5 @@
-import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import adapter from '@sveltejs/adapter-vercel';
 
 const ignore = [].includes.bind([
   'css-unused-selector',
@@ -12,14 +11,7 @@ const config = {
   compilerOptions: {
     runes: true
   },
-  preprocess: [
-    vitePreprocess(),
-    preprocess({
-      scss: {
-        prependData: '@use "src/styles" as *;'
-      }
-    })
-  ],
+  preprocess: [vitePreprocess()],
   kit: {
     adapter: adapter(),
     alias: {

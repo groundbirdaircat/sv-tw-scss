@@ -23,6 +23,8 @@
 </div>
 
 <style lang="postcss">
+  @reference "../../styles/tailwind.css";
+
   button {
     @apply bg-stone-800 hover:bg-stone-700 px-3 py-1 rounded-lg text-sm w-fit;
   }
