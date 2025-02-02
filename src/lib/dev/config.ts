@@ -11,15 +11,19 @@ export class Config {
   });
 
   // Local Storage
+  private static lsKey(k: string) {
+    return `${Config.projectName}-${k}`;
+  }
+
   static LS = {
     devUIDebug: {
-      show: `${Config.projectName}-dev-ui-debug-show`
+      show: Config.lsKey('dev-ui-debug-show')
     },
     devMenu: {
-      show: `${Config.projectName}-dev-menu-show`,
-      position: `${Config.projectName}-dev-menu-position`,
-      positionBeforeMin: `${Config.projectName}-dev-menu-position-before-min`,
-      minimized: `${Config.projectName}-dev-menu-minimized`
+      show: Config.lsKey('dev-menu-show'),
+      position: Config.lsKey('dev-menu-position'),
+      positionBeforeMin: Config.lsKey('dev-menu-position-before-min'),
+      minimized: Config.lsKey('dev-menu-minimized')
     }
   } as const;
 }

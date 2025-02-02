@@ -2,10 +2,9 @@
 
 #### **Library Docs**
 
-- **[Svelte](https://svelte.dev/docs/introduction)**
-- **[Svelte 5](https://svelte-5-preview.vercel.app/docs/introduction)**
-- **[Sveltekit](https://kit.svelte.dev/docs/introduction)**
-- **[Tailwind](https://tailwindcss.com/docs/installation)**
+- **[Svelte](https://svelte.dev/docs/svelte/overview)**
+- **[Sveltekit](https://svelte.dev/docs/kit/introduction)**
+- **[Tailwind](https://tailwindcss.com/docs/styling-with-utility-classes)**
 - **[Scss](https://sass-lang.com/documentation/syntax)**
 - **[TypeScript](https://www.typescriptlang.org/docs/)**
 - **[Prettier](https://prettier.io/docs/en/index.html)**
@@ -43,49 +42,57 @@ Format and lint consecutively
 
 ## **Global styles**
 
-*src/styles/global.scss*
+### **Tailwind**
+##### *src/styles/tailwind.css*
+
+- [**Tailwind utilities**](https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities) - Classes used with Tailwind media queries
+
+- [**Tailwind layers**](https://tailwindcss.com/docs/adding-custom-styles#adding-base-styles) - Other global css
+
+### **Scss**
+##### *src/styles/global.scss*
+
+- For **Scss** features
 
 <br />
 
 ## **Media queries**
 
-### **Tailwind Screens** ***&*** **Scss Mixins**
-
-Tailwind and Scss are configured to use the following values
+Tailwind, Scss, and Svelte are configured to use the following values
 
 |*values*                  | *mob* | *tab* | *lap* | *dsk* | *wde* | *uwd* | *suw* |
 |------------------------|-----|-----|-----|-----|-----|-----|-----|
-| before(tablet)         | 🔵   |     |     |     |     |     |     |
-| before(laptop)         | 🔵   | 🔵   |     |     |     |     |     |
-| before(desktop)        | 🔵   | 🔵   | 🔵   |     |     |     |     |
-| before(wide)           | 🔵   | 🔵   | 🔵   | 🔵   |     |     |     |
-| before(ultrawide)      | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |     |     |
-| before(superultrawide) | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |     |
-| after(mobile)          |     | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |
-| after(tablet)          |     |     | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |
-| after(laptop)          |     |     |     | 🔵   | 🔵   | 🔵   | 🔵   |
-| after(desktop)         |     |     |     |     | 🔵   | 🔵   | 🔵   |
-| after(wide)            |     |     |     |     |     | 🔵   | 🔵   |
-| after(ultrawide)       |     |     |     |     |     |     | 🔵   |
-| is(small)              | 🔵   | 🔵   |     |     |     |     |     |
-| is(medium)             |     |     | 🔵   | 🔵   |     |     |     |
-| is(large)              |     |     |     |     | 🔵   | 🔵   | 🔵   |
-| is(mobile)             | 🔵   |     |     |     |     |     |     |
-| is(tablet)             |     | 🔵   |     |     |     |     |     |
-| is(laptop)             |     |     | 🔵   |     |     |     |     |
-| is(desktop)            |     |     |     | 🔵   |     |     |     |
-| is(wide)               |     |     |     |     | 🔵   |     |     |
-| is(ultrawide)          |     |     |     |     |     | 🔵   |     |
-| is(superultrawide)     |     |     |     |     |     |     | 🔵   |
+| beforeTablet         | 🔵   |     |     |     |     |     |     |
+| beforeLaptop         | 🔵   | 🔵   |     |     |     |     |     |
+| beforeDesktop        | 🔵   | 🔵   | 🔵   |     |     |     |     |
+| beforeWide           | 🔵   | 🔵   | 🔵   | 🔵   |     |     |     |
+| beforeUltrawide      | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |     |     |
+| beforeSuperultrawide | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |     |
+| afterMobile          |     | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |
+| afterTablet          |     |     | 🔵   | 🔵   | 🔵   | 🔵   | 🔵   |
+| afterLaptop          |     |     |     | 🔵   | 🔵   | 🔵   | 🔵   |
+| afterDesktop         |     |     |     |     | 🔵   | 🔵   | 🔵   |
+| afterWide            |     |     |     |     |     | 🔵   | 🔵   |
+| afterUltrawide       |     |     |     |     |     |     | 🔵   |
+| isSmall              | 🔵   | 🔵   |     |     |     |     |     |
+| isMedium             |     |     | 🔵   | 🔵   |     |     |     |
+| isLarge              |     |     |     |     | 🔵   | 🔵   | 🔵   |
+| isMobile             | 🔵   |     |     |     |     |     |     |
+| isTablet             |     | 🔵   |     |     |     |     |     |
+| isLaptop             |     |     | 🔵   |     |     |     |     |
+| isDesktop            |     |     |     | 🔵   |     |     |     |
+| isWide               |     |     |     |     | 🔵   |     |     |
+| isUltrawide          |     |     |     |     |     | 🔵   |     |
+| isSuperultrawide     |     |     |     |     |     |     | 🔵   |
 ___
 
 <br />
 
-### **Svelte Media Query State**
-
-The `Size` class can be accessed wherever [Svelte Runes](https://svelte.dev/blog/runes) are available   
 
 ### **Svelte**
+
+The reactive `Size` *class* can be accessed wherever [Svelte Runes](https://svelte.dev/docs/svelte/what-are-runes) are available   
+
 ```ts
 if (Size.isSuperultrawide) {
   ...
@@ -94,20 +101,22 @@ if (Size.isSuperultrawide) {
 
 ### **Tailwind**
 ```html
-<div class="after(tablet):text-lg">
+<div class="afterTablet:text-lg">
   ...
 </div>
   ```
 
 ### **Scss**
 
+The `Size` *mixin* is be used in `<style lang="scss">` blocks
+
 ```scss
-@include before(laptop) {
+@include Size(isLaptop) {
   ...
 };
 ```
 
 #### **Breakpoint configs**  
-##### *tailwind.config.js*  
+##### *src/styles/tailwind.css*  
 ##### *src/lib/state/media-query.svelte.ts*  
-##### *src/styles/mixins/_mq-breakpoints.scss*  
+##### *src/styles/mixins/_media-query.scss*  

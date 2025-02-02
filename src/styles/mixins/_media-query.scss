@@ -1,76 +1,74 @@
 @use 'sass:map';
-@use 'mq-breakpoints' as *;
 
-// Before
-
-@mixin before($key) {
-  $size: map-get($before-breakpoints, $key);
-  @media (max-width: $size) {
-    @content;
-  }
-}
-
-$before-breakpoints: (
-  mobile: ⛔ before(mobile) is invalid ⛔,
-  tablet: $bp-m,
-  laptop: $bp-t,
-  desktop: $bp-l,
-  wide: $bp-d,
-  ultrawide: $bp-w,
-  superultrawide: $bp-u
-);
-
-// After
-
-@mixin after($key) {
-  $size: map-get($after-breakpoints, $key);
-  @media (min-width: $size) {
-    @content;
-  }
-}
-
-$after-breakpoints: (
-  mobile: $bp-m,
-  tablet: $bp-t,
-  laptop: $bp-l,
-  desktop: $bp-d,
-  wide: $bp-w,
-  ultrawide: $bp-u,
-  superultrawide: ⛔ after(superultrawide) is invalid ⛔
-);
-
-// Is
-
-@mixin is($key) {
-  $min-size: map-get($is-min-breakpoints, $key);
-  $max-size: map-get($is-max-breakpoints, $key);
+@mixin Size($key) {
+  $min-size: map.get($min-breakpoints, $key) + 1;
+  $max-size: map.get($max-breakpoints, $key);
   @media (max-width: $max-size) and (min-width: $min-size) {
     @content;
   }
 }
 
-$is-min-breakpoints: (
-  mobile: $bp-z,
-  tablet: $bp-m,
-  laptop: $bp-t,
-  desktop: $bp-l,
-  wide: $bp-d,
-  ultrawide: $bp-w,
-  superultrawide: $bp-u,
-  small: $bp-z,
-  medium: $bp-t,
-  large: $bp-d
+$bp-z: -1px;
+$bp-m: 600px;
+$bp-t: 900px;
+$bp-l: 1400px;
+$bp-d: 2200px;
+$bp-w: 3300px;
+$bp-u: 4400px;
+$bp-s: 99999px;
+
+$min-breakpoints: (
+  beforeTablet: $bp-z,
+  beforeLaptop: $bp-z,
+  beforeDesktop: $bp-z,
+  beforeWide: $bp-z,
+  beforeUltrawide: $bp-z,
+  beforeSuperultrawide: $bp-z,
+  
+  afterMobile: $bp-m,
+  afterTablet: $bp-t,
+  afterLaptop: $bp-l,
+  afterDesktop: $bp-d,
+  afterWide: $bp-w,
+  afterUltrawide: $bp-u,
+  
+  isSmall: $bp-z,
+  isMedium: $bp-t,
+  isLarge: $bp-d,
+  
+  isMobile: $bp-z,
+  isTablet: $bp-m,
+  isLaptop: $bp-t,
+  isDesktop: $bp-l,
+  isWide: $bp-d,
+  isUltrawide: $bp-w,
+  isSuperultrawide: $bp-u
 );
 
-$is-max-breakpoints: (
-  mobile: $bp-m,
-  tablet: $bp-t,
-  laptop: $bp-l,
-  desktop: $bp-d,
-  wide: $bp-w,
-  ultrawide: $bp-u,
-  superultrawide: $bp-s,
-  small: $bp-t,
-  medium: $bp-d,
-  large: $bp-s
+$max-breakpoints: (
+  beforeTablet: $bp-m,
+  beforeLaptop: $bp-t,
+  beforeDesktop: $bp-l,
+  beforeWide: $bp-d,
+  beforeUltrawide: $bp-w,
+  beforeSuperultrawide: $bp-u,
+  
+  afterMobile: $bp-s,
+  afterTablet: $bp-s,
+  afterLaptop: $bp-s,
+  afterDesktop: $bp-s,
+  afterWide: $bp-s,
+  afterUltrawide: $bp-s,
+  
+  isSmall: $bp-t,
+  isMedium: $bp-d,
+  isLarge: $bp-s,
+  
+  isMobile: $bp-m,
+  isTablet: $bp-t,
+  isLaptop: $bp-l,
+  isDesktop: $bp-d,
+  isWide: $bp-w,
+  isUltrawide: $bp-u,
+  isSuperultrawide: $bp-s
 );
