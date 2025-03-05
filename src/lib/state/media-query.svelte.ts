@@ -123,7 +123,7 @@ export class Size {
 ].forEach(({ min, max }, index) => {
   if (!browser) return;
 
-  const q = `${max ? `(max-width: ${max}px)` : ''}${min && max ? ' and ' : ''}${min ? `(min-width: ${min + 1}px)` : ''}`;
+  const q = `${max ? `(max-width: ${max}px)` : ''}${min && max ? ' and ' : ''}${min ? `(min-width: ${min + 0.1}px)` : ''}`;
   const query = window.matchMedia(q);
   query.addEventListener('change', (e: MediaQueryListEvent) => e.matches && (_value = index));
   query.matches && (_value = index);

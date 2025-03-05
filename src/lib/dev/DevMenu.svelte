@@ -105,7 +105,7 @@
 
 {#if Config.isDevEnvironment && devState.showDevMenu}
   <div
-    class="absolute z-50 left-0 top-0 bg-black overflow-clip rounded-lg"
+    class="absolute z-[1000] left-0 top-0 bg-black overflow-clip rounded-lg"
     bind:this={devMenuRef}
     style:left
     style:top

@@ -1,7 +1,7 @@
 @use 'sass:map';
 
 @mixin Size($key) {
-  $min-size: map.get($min-breakpoints, $key) + 1;
+  $min-size: map.get($min-breakpoints, $key) + .1;
   $max-size: map.get($max-breakpoints, $key);
   @media (max-width: $max-size) and (min-width: $min-size) {
     @content;

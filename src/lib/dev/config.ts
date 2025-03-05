@@ -24,6 +24,9 @@ export class Config {
       position: Config.lsKey('dev-menu-position'),
       positionBeforeMin: Config.lsKey('dev-menu-position-before-min'),
       minimized: Config.lsKey('dev-menu-minimized')
+    },
+    devBreakpointStatus: {
+      show: Config.lsKey('dev-breakpoint-status-show')
     }
   } as const;
 }

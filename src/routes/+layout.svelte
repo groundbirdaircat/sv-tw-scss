@@ -1,4 +1,5 @@
 <script lang="ts">
+  import BreakpointStatus from '$dev/BreakpointStatus.svelte';
   import type { SlotContent } from '$models/general';
   import DevMenu from '$dev/DevMenu.svelte';
   import '../styles/tailwind.css';
@@ -16,5 +17,6 @@
     {@render children()}
   </div>
 
+  <BreakpointStatus />
   <DevMenu />
 </div>

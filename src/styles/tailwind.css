@@ -8,7 +8,7 @@
 }
 
 @theme {
-  --breakpoint*: inherit;
+  --breakpoint-*: initial;
 }
 
 @custom-variant beforeTablet (@media (width <= 600px));
