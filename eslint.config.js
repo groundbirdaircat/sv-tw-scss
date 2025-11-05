@@ -36,6 +36,7 @@ export default tseslint.config(
         'error',
         { varsIgnorePattern: '^_+', argsIgnorePattern: '^_+' }
       ],
+      'svelte/no-navigation-without-resolve': 'off',
       'svelte/require-each-key': 'off',
       'no-empty': 'off'
     }
