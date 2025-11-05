@@ -1,6 +1,6 @@
 <script lang="ts">
+  import type { SlotContent } from '$modules/general/general.model';
   import BreakpointStatus from '$dev/BreakpointStatus.svelte';
-  import type { SlotContent } from '$models/general';
   import DevMenu from '$dev/DevMenu.svelte';
   import '../styles/tailwind.css';
   import '../styles/global.scss';

@@ -34,8 +34,10 @@ export default tseslint.config(
       ],
       '@typescript-eslint/no-unused-vars': [
         'error',
-        { varsIgnorePattern: '^_+$', argsIgnorePattern: '^_+$' }
-      ]
+        { varsIgnorePattern: '^_+', argsIgnorePattern: '^_+' }
+      ],
+      'svelte/require-each-key': 'off',
+      'no-empty': 'off'
     }
   },
   {

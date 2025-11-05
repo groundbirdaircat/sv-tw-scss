@@ -1,4 +1,4 @@
-import type { Dict } from '$models/general';
+import type { Dict } from '$modules/general/general.model';
 
 export function makeLogObj(init: Dict<boolean>): Dict<boolean> {
   const logObj = { enabled: init._enabled };

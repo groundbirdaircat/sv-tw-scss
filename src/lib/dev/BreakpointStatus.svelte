@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Size } from '$lib/state/media-query.svelte';
-  import Icon from '$components/general/Icon.svelte';
+  import { Size } from '$modules/general/media-query.state.svelte';
+  import Icon from '$modules/general/components/Icon.svelte';
   import { devState } from './dev-state.svelte';
 
   let innerWidth = $state<number>();

@@ -1,10 +1,10 @@
 <script lang="ts">
+  import { lsGet, lsSet } from '$modules/general/util/storage.util';
+  import Icon from '$modules/general/components/Icon.svelte';
   import DevMenuContent from '$dev/DevMenuContent.svelte';
-  import Icon from '$components/general/Icon.svelte';
   import { stopPropagation } from '$actions/events';
-  import { lsGet, lsSet } from '$utils/storage';
+  import { Color } from '$modules/general/color';
   import { devState } from './dev-state.svelte';
-  import { Color } from '$classes/color';
   import { Config } from './config';
 
   let devMenuRef = $state() as HTMLDivElement;

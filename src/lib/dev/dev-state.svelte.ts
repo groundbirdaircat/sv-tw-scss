@@ -1,4 +1,4 @@
-import { lsGet, lsSet } from '$utils/storage';
+import { lsGet, lsSet } from '$modules/general/util/storage.util';
 import { Config } from './config';
 
 class DevState {

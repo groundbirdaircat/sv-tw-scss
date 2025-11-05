@@ -16,16 +16,10 @@ const config = {
     adapter: adapter(),
     alias: {
       $dev: './src/lib/dev',
-      $mock: './src/lib/mock',
-      $utils: './src/lib/utils',
+      $server: './src/lib/server',
       $assets: './src/lib/assets',
-      $guards: './src/lib/guards',
-      $models: './src/lib/models',
-      $stores: './src/lib/stores',
-      $actions: './src/lib/actions',
-      $classes: './src/lib/classes',
-      $services: './src/lib/services',
-      $components: './src/lib/components'
+      $modules: './src/lib/modules',
+      $actions: './src/lib/actions'
     }
   },
   vitePlugin: {

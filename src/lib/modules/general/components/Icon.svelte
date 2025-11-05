@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Icon } from '$assets/icon';
-  import type { Icons } from '$models/icon';
+  import type { Icons } from '../general.model';
+  import { Icon } from '$modules/general/icon';
 
   let {
     color,

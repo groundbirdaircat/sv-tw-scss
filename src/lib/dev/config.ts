@@ -1,5 +1,5 @@
 import { PUBLIC_ENVIRONMENT } from '$env/static/public';
-import { freeze, makeLogObj } from './util';
+import { freeze, makeLogObj } from './dev.util';
 
 export class Config {
   static projectName = 'default-project-name'; // TODO
