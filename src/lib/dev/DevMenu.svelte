@@ -2,7 +2,7 @@
   import { lsGet, lsSet } from '$modules/general/util/storage.util';
   import Icon from '$modules/general/components/Icon.svelte';
   import DevMenuContent from '$dev/DevMenuContent.svelte';
-  import { stopPropagation } from '$actions/events';
+  import { stopPropagation } from '$attachments/events';
   import { Color } from '$modules/general/color';
   import { devState } from './dev-state.svelte';
   import { Config } from './config';
@@ -120,7 +120,7 @@
         <button
           class="w-6 ms-auto flex-center opacity-50 hover:opacity-100 transition-opacity"
           onclick={on.clickMaximize}
-          use:stopPropagation={'mousedown'}
+          {@attach stopPropagation('mousedown')}
         >
           <Icon type="maximize" class="h-3" color={Color.white} />
         </button>
@@ -128,7 +128,7 @@
         <button
           class="w-6 ms-auto flex-center opacity-30 hover:opacity-100 transition-opacity"
           onclick={on.clickMinimize}
-          use:stopPropagation={'mousedown'}
+          {@attach stopPropagation('mousedown')}
         >
           <span class="font-bold text-white text-2xl pb-2.5"> _ </span>
         </button>
@@ -137,7 +137,7 @@
       <button
         class="w-6 flex-center opacity-40 hover:opacity-100 transition-opacity"
         onclick={on.clickExit}
-        use:stopPropagation={'mousedown'}
+        {@attach stopPropagation('mousedown')}
       >
         <Icon type="exit" class="h-3" color={Color.white} />
       </button>

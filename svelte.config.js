@@ -19,7 +19,7 @@ const config = {
       $server: './src/lib/server',
       $assets: './src/lib/assets',
       $modules: './src/lib/modules',
-      $actions: './src/lib/actions'
+      $attachments: './src/lib/attachments'
     }
   },
   vitePlugin: {
