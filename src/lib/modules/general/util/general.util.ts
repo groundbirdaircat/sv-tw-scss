@@ -19,6 +19,17 @@ export function space(value: string): string {
   return value ? ' ' + value : '';
 }
 
+// eslint-disable-next-line
+export function IF(condition: any, value: any) {
+  if (condition) return value;
+}
+
+// eslint-disable-next-line
+export function IF_ELSE(condition: any, value: string, value2: string) {
+  if (condition) return value;
+  return value2;
+}
+
 export function downloadFile(url: string, fileName: string): void {
   const link = document.createElement('a');
   link.href = url;
