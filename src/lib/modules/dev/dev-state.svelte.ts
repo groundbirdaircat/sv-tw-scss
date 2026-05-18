@@ -1,5 +1,5 @@
 import { lsGet, lsSet } from '$modules/general/util/storage.util';
-import { Config } from './config';
+import { Config } from '$modules/project/project.config';
 
 class DevState {
   private _showDevMenu = $state(lsGet(Config.LS.devMenu.show, false));

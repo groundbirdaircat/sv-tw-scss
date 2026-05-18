@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Size } from '$modules/general/media-query.state.svelte';
   import Icon from '$modules/general/components/Icon.svelte';
-  import { devState } from './dev-state.svelte';
+  import { devState } from '../dev-state.svelte';
 
   let innerWidth = $state<number>();
 
@@ -50,7 +50,7 @@
 
 {#if devState.showBreakpointStatus}
   <div
-    class="absolute z-[999] left-4 top-4 px-4 py-8 rounded-2xl grid grid-cols-[auto_auto_auto_auto] justify-items-center text-sm text-neutral-300 bg-black select-none"
+    class="absolute z-999 left-4 top-4 px-4 py-8 rounded-2xl grid grid-cols-[auto_auto_auto_auto] justify-items-center text-sm text-neutral-300 bg-black select-none"
   >
     <div class="flex-align justify-end pb-4 w-full text-right pe-4 font-bold">
       <div>width:</div>

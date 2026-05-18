@@ -15,7 +15,6 @@ const config = {
   kit: {
     adapter: adapter(),
     alias: {
-      $dev: './src/lib/dev',
       $server: './src/lib/server',
       $assets: './src/lib/assets',
       $modules: './src/lib/modules'

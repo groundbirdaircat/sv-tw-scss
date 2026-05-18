@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { devState } from './dev-state.svelte';
+  import { devState } from '../dev-state.svelte';
 
   const on = {
     clickTemp() {},
@@ -25,14 +25,14 @@
 <div class="flex-align gap-2 text-xs">
   <div class="flex-align gap-2 text-xs">
     Breakpoint Status:
-    <button onclick={on.clickBreakpointStatus}
-      >{devState.showBreakpointStatus ? 'On' : 'Off'}</button
-    >
+    <button onclick={on.clickBreakpointStatus}>
+      {devState.showBreakpointStatus ? 'On' : 'Off'}
+    </button>
   </div>
 </div>
 
 <style lang="postcss">
-  @reference "../../styles/tailwind.css";
+  @reference "src/styles/tailwind.css";
 
   button {
     @apply bg-stone-800 hover:bg-stone-700 px-3 py-1 rounded-lg text-sm w-fit;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { devState } from './dev-state.svelte';
+  import { devState } from '../dev-state.svelte';
 
   let {
     show = true,

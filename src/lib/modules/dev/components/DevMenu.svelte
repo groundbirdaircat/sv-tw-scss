@@ -1,11 +1,11 @@
 <script lang="ts">
   import { lsGet, lsSet } from '$modules/general/util/storage.util';
   import Icon from '$modules/general/components/Icon.svelte';
-  import DevMenuContent from '$dev/DevMenuContent.svelte';
-  import { Color } from '$modules/general/color';
-  import { devState } from './dev-state.svelte';
-  import { Config } from './config';
+  import { Config } from '$modules/project/project.config';
   import { mod } from '$modules/general/util/event.util';
+  import DevMenuContent from './DevMenuContent.svelte';
+  import { devState } from '../dev-state.svelte';
+  import { Color } from '$modules/general/color';
 
   let devMenuRef = $state() as HTMLDivElement;
 
@@ -105,7 +105,7 @@
 
 {#if Config.isDevEnvironment && devState.showDevMenu}
   <div
-    class="absolute z-[1000] left-0 top-0 bg-black overflow-clip rounded-lg"
+    class="absolute z-1000 left-0 top-0 bg-black overflow-clip rounded-lg"
     bind:this={devMenuRef}
     style:left
     style:top
@@ -143,7 +143,7 @@
       </button>
     </div>
     {#if !isMinimized}
-      <div class="dev-menu-content p-4 text-white flex-col gap-2 max-h-[40rem] overflow-auto">
+      <div class="dev-menu-content p-4 text-white flex-col gap-2 max-h-160 overflow-auto">
         <DevMenuContent />
       </div>
     {/if}
