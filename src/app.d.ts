@@ -9,7 +9,8 @@ declare global {
   namespace svelteHTML {
     interface HTMLAttributes<T> {
       onClickOutside?: CompositionEventHandler<T>;
-      onPressKeyCode?: CompositionEventHandler<T>;
+      onKeypress?: CompositionEventHandler<T>;
+      onKeydown?: CompositionEventHandler<T>;
     }
   }
 }
